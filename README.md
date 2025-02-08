@@ -1,0 +1,2 @@
+# qtlearning
+leaning qt
