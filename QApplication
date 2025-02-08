@@ -16,8 +16,8 @@ QApplication 负责管理应用程序的主事件循环，处理所有的 GUI �
 
 示例代码：
 
-cpp
-```
+
+```cpp
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
@@ -34,8 +34,8 @@ QApplication 管理所有顶级窗口的显示和关闭。顶级窗口是没有�
 
 示例代码：
 
-cpp
-```
+
+```cpp
 QMainWindow *window = new QMainWindow;
 window->show(); // 在应用程序中显示窗口
 
@@ -55,8 +55,8 @@ QString text = clipboard->text(); // 获取剪贴板文本
 ```
 拖放支持： QApplication 允许窗口部件接受拖放操作。我们需要在需要接受拖放的窗口部件中设置 acceptDrops 属性，并重载 dragEnterEvent 和 dropEvent 方法。
 
-cpp
-```
+
+```cpp
 class MyWidget : public QWidget {
     Q_OBJECT
 public:
@@ -79,8 +79,8 @@ protected:
 ```
 系统托盘图标： QApplication 允许应用程序在系统托盘区域显示图标和菜单。
 
-cpp
-```
+
+```cpp
 QSystemTrayIcon *trayIcon = new QSystemTrayIcon(QIcon(":/images/icon.png"));
 trayIcon->show(); // 显示系统托盘图标
 trayIcon->setToolTip("My Application");
@@ -94,8 +94,8 @@ QApplication 允许设置全局应用程序属性，如应用程序名称、图�
 
 示例代码：
 
-cpp
-```
+
+```cpp
 QApplication::setApplicationName("My Application"); // 设置应用程序名称
 QApplication::setWindowIcon(QIcon(":/images/app_icon.png")); // 设置应用程序图标
 QApplication::setStyle("Fusion"); // 设置应用程序样式
@@ -105,8 +105,8 @@ QApplication 提供了访问剪贴板的功能，允许开发者在应用程序�
 
 示例代码：
 
-cpp
-```
+
+```cpp
 QClipboard *clipboard = QApplication::clipboard();
 clipboard->setText("Copied text"); // 复制文本到剪贴板
 QString copiedText = clipboard->text(); // 从剪贴板获取文本
@@ -116,8 +116,8 @@ QApplication 允许窗口部件接受拖放操作，支持实现文件、文本�
 
 示例代码：
 
-cpp
-```
+
+```cpp
 class MyWidget : public QWidget {
     Q_OBJECT
 public:
@@ -143,8 +143,8 @@ QApplication 提供了系统托盘图标的支持，允许应用程序在系统�
 
 示例代码：
 
-cpp
-```
+
+```cpp
 QSystemTrayIcon *trayIcon = new QSystemTrayIcon(QIcon(":/images/icon.png"));
 trayIcon->show(); // 显示系统托盘图标
 trayIcon->setToolTip("My Application");
