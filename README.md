@@ -2,6 +2,7 @@
 leaning qt
 
 # follow is a samle using qt play video
+```
 #include <QApplication>
 #include <QOpenGLWidget>
 #include <QThread>
@@ -183,3 +184,4 @@ int main(int argc, char *argv[]) {
 }
 
 #include "main.moc"
+```
