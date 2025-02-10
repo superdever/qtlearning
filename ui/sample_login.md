@@ -74,6 +74,24 @@ void LoginWidget::on_cancelButton_clicked()
 
 ```
 
+```cpp
+
+int main(int argc, char* argv[]) {
+    QApplication app(argc, argv);
+    LoginWidget loginWidget;
+    MainWindow mainWidget;
+
+    QObject::connect(&loginWidget, &LoginWidget::loginSuccessful, [&]() {
+        loginWidget.hide();
+        mainWidget.show();
+        });
+
+    loginWidget.show();
+
+    return app.exec();
+}
+```
+
 LoginWidget.ui
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
